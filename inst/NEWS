@@ -1,0 +1,13 @@
+######################################################################
+#  News: to package distrDoc 
+######################################################################
+
+
+##############
+v 1.8   (starting version to be in line with distr, distrSim, distrTEst)
+##############
+
+
+* distrDoc packaged to gather documentation for distr, distrEx, distrSim, distrTEst in form of 
+  a common vignette
+
