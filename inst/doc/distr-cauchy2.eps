@@ -25,8 +25,8 @@
 /c   { newpath 0 360 arc } def
 /r   { 4 2 roll moveto 1 copy 3 -1 roll exch 0 exch rlineto 0 rlineto -1 mul 0 exch rlineto closepath } def
 /p1  { stroke } def
-/p2  { gsave bg setrgbcolor fill grestore newpath } def
-/p3  { gsave bg setrgbcolor fill grestore stroke } def
+/p2  { gsave bg fill grestore newpath } def
+/p3  { gsave bg fill grestore stroke } def
 /t   { 6 -2 roll moveto gsave rotate
        ps mul neg 0 2 1 roll rmoveto
        1 index stringwidth pop
@@ -117,7 +117,7 @@ dup length dict begin
 %%Page: 1 1
 bp
 38.97 48.47 124.04 393.03 cl
-0 0 0 rgb
+0 setgray
 0.75 setlinewidth
 [] 0 setdash
 1 setlinecap
@@ -1126,7 +1126,7 @@ np
 0.08 -0.07 l
 o
 0.00 0.00 432.00 432.00 cl
-0 0 0 rgb
+0 setgray
 0.75 setlinewidth
 [] 0 setdash
 1 setlinecap
@@ -1209,15 +1209,15 @@ np
 0 -344.56 l
 o
 0.00 0.00 144.00 432.00 cl
-/ps 10 def /Font2 findfont 10 s
-0 0 0 rgb
-81.50 408.93 (Density of Cauchy\(0, 1\)) .5 0 0 t
 /ps 8 def /Font1 findfont 8 s
-81.50 12.36 (grid) .5 0 0 t
-8.55 220.75 (d\(x\)\(grid\)) .5 0 90 t
+0 setgray
+81.50 12.36 (x) .5 0 0 t
+8.55 220.75 (d\(x\)) .5 0 90 t
+/ps 10 def /Font2 findfont 10 s
+81.50 408.93 (Density of Cauchy\(0, 1\)) .5 0 0 t
 182.97 48.47 268.04 393.03 cl
 182.97 48.47 268.04 393.03 cl
-0 0 0 rgb
+0 setgray
 0.75 setlinewidth
 [] 0 setdash
 1 setlinecap
@@ -2226,7 +2226,7 @@ np
 0.08 0.04 l
 o
 0.00 0.00 432.00 432.00 cl
-0 0 0 rgb
+0 setgray
 0.75 setlinewidth
 [] 0 setdash
 1 setlinecap
@@ -2304,15 +2304,90 @@ np
 0 -344.56 l
 o
 144.00 0.00 288.00 432.00 cl
-/ps 10 def /Font2 findfont 10 s
-0 0 0 rgb
-225.50 408.93 (CDF of Cauchy\(0, 1\)) .5 0 0 t
 /ps 8 def /Font1 findfont 8 s
-225.50 12.36 (grid) .5 0 0 t
-152.55 220.75 (p\(x\)\(grid\)) .5 0 90 t
+0 setgray
+225.50 12.36 (q) .5 0 0 t
+152.55 220.75 (p\(q\)) .5 0 90 t
+/ps 10 def /Font2 findfont 10 s
+225.50 408.93 (CDF of Cauchy\(0, 1\)) .5 0 0 t
 326.97 48.47 412.04 393.03 cl
+0.00 0.00 432.00 432.00 cl
+0 setgray
+0.75 setlinewidth
+[] 0 setdash
+1 setlinecap
+1 setlinejoin
+10.00 setmiterlimit
+np
+341.51 48.47 m
+55.99 0 l
+o
+np
+341.51 48.47 m
+0 -4.75 l
+o
+np
+360.17 48.47 m
+0 -4.75 l
+o
+np
+378.84 48.47 m
+0 -4.75 l
+o
+np
+397.50 48.47 m
+0 -4.75 l
+o
+/ps 8 def /Font1 findfont 8 s
+341.51 31.36 (0.2) .5 0 0 t
+360.17 31.36 (0.4) .5 0 0 t
+378.84 31.36 (0.6) .5 0 0 t
+397.50 31.36 (0.8) .5 0 0 t
+np
+326.97 61.23 m
+0 319.04 l
+o
+np
+326.97 61.23 m
+-4.76 0 l
+o
+np
+326.97 140.99 m
+-4.76 0 l
+o
+np
+326.97 220.75 m
+-4.76 0 l
+o
+np
+326.97 300.51 m
+-4.76 0 l
+o
+np
+326.97 380.27 m
+-4.76 0 l
+o
+315.56 61.23 (-4) .5 0 90 t
+315.56 140.99 (-2) .5 0 90 t
+315.56 220.75 (0) .5 0 90 t
+315.56 300.51 (2) .5 0 90 t
+315.56 380.27 (4) .5 0 90 t
+np
+326.97 48.47 m
+85.07 0 l
+0 344.56 l
+-85.07 0 l
+0 -344.56 l
+o
+288.00 0.00 432.00 432.00 cl
+/ps 8 def /Font1 findfont 8 s
+0 setgray
+369.50 12.36 (p) .5 0 0 t
+296.55 220.75 (q\(p\)) .5 0 90 t
+/ps 10 def /Font2 findfont 10 s
+369.50 408.93 (Quantile function of Cauchy\(0, 1\)) .5 0 0 t
 326.97 48.47 412.04 393.03 cl
-0 0 0 rgb
+0 setgray
 0.75 setlinewidth
 [] 0 setdash
 1 setlinecap
@@ -3320,81 +3395,6 @@ np
 0.02 0.32 l
 0.01 0.32 l
 o
-0.00 0.00 432.00 432.00 cl
-0 0 0 rgb
-0.75 setlinewidth
-[] 0 setdash
-1 setlinecap
-1 setlinejoin
-10.00 setmiterlimit
-np
-341.51 48.47 m
-55.99 0 l
-o
-np
-341.51 48.47 m
-0 -4.75 l
-o
-np
-360.17 48.47 m
-0 -4.75 l
-o
-np
-378.84 48.47 m
-0 -4.75 l
-o
-np
-397.50 48.47 m
-0 -4.75 l
-o
-/ps 8 def /Font1 findfont 8 s
-341.51 31.36 (0.2) .5 0 0 t
-360.17 31.36 (0.4) .5 0 0 t
-378.84 31.36 (0.6) .5 0 0 t
-397.50 31.36 (0.8) .5 0 0 t
-np
-326.97 61.23 m
-0 319.04 l
-o
-np
-326.97 61.23 m
--4.76 0 l
-o
-np
-326.97 140.99 m
--4.76 0 l
-o
-np
-326.97 220.75 m
--4.76 0 l
-o
-np
-326.97 300.51 m
--4.76 0 l
-o
-np
-326.97 380.27 m
--4.76 0 l
-o
-315.56 61.23 (-4) .5 0 90 t
-315.56 140.99 (-2) .5 0 90 t
-315.56 220.75 (0) .5 0 90 t
-315.56 300.51 (2) .5 0 90 t
-315.56 380.27 (4) .5 0 90 t
-np
-326.97 48.47 m
-85.07 0 l
-0 344.56 l
--85.07 0 l
-0 -344.56 l
-o
-288.00 0.00 432.00 432.00 cl
-/ps 10 def /Font2 findfont 10 s
-0 0 0 rgb
-369.50 408.93 (Quantile of Cauchy\(0, 1\)) .5 0 0 t
-/ps 8 def /Font1 findfont 8 s
-369.50 12.36 (p\(x\)\(grid\)) .5 0 0 t
-296.55 220.75 (grid) .5 0 90 t
 ep
 %%Trailer
 %%Pages: 1
