@@ -1,6 +1,6 @@
 Package: distrDoc
-Version: 2.0.2
-Date: 2008-11-05
+Version: 2.0.3
+Date: 2008-11-27
 Title: Documentation for packages distr, distrEx, distrSim, distrTEst
 Description: provides documentation in form of a common vignette to
         packages distr, distrEx, distrMod, distrSim, distrTEst
@@ -13,4 +13,4 @@ Suggests: distrEx(>= 2.0.0), distrSim(>= 2.0.0), distrTEst(>= 2.0.0),
 LazyLoad: yes
 License: LGPL-3
 URL: http://distr.r-forge.r-project.org/
-Packaged: Wed Nov  5 19:14:04 2008; btm722
+Packaged: Sat Nov 29 16:31:27 2008; btm722
