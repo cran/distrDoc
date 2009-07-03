@@ -1,6 +1,6 @@
 Package: distrDoc
-Version: 2.1
-Date: 2009-04-14
+Version: 2.1.1
+Date: 2009-07-03
 Title: Documentation for packages distr, distrEx, distrSim, distrTEst
 Description: provides documentation in form of a common vignette to
         packages distr, distrEx, distrMod, distrSim, distrTEst
@@ -17,6 +17,6 @@ URL: http://distr.r-forge.r-project.org/
 LastChangedDate: {$LastChangedDate: 2009-04-14 11:59:50 +0200 (Di, 14
         Apr 2009) $}
 LastChangedRevision: {$LastChangedRevision: 464 $}
-Packaged: 2009-04-15 08:48:10 UTC; ruckdesc
+Packaged: 2009-07-03 05:02:37 UTC; ruckdesc
 Repository: CRAN
-Date/Publication: 2009-04-15 13:50:06
+Date/Publication: 2009-07-03 07:18:10
