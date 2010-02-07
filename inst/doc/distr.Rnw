@@ -8,10 +8,10 @@
 \usepackage{svn-multi}
 % Version control information:
 \svnidlong
-{$HeadURL: svn+ssh://stamats@svn.r-forge.r-project.org/svnroot/distr/branches/distr-2.2/pkg/distrDoc/inst/doc/distr.Rnw $}
-{$LastChangedDate: 2009-09-25 12:17:45 +0200 (Fr, 25. Sep 2009) $}
-{$LastChangedRevision: 590 $}
-{$LastChangedBy: ruckdeschel $}
+{$HeadURL: svn+ssh://ruckdeschel@svn.r-forge.r-project.org/svnroot/distr/pkg/distrDoc/inst/doc/distr.Rnw $}
+{$LastChangedDate: 2009-11-01 11:10:10 +0100 (So, 01 Nov 2009) $}
+{$LastChangedRevision: 623 $}
+{$LastChangedBy: stamats $}
 %\svnid{$Id: example_main.tex 146 2008-12-03 13:29:19Z martin $}
 % Don't forget to set the svn property 'svn:keywords' to
 % 'HeadURL LastChangedDate LastChangedRevision LastChangedBy' or
@@ -1476,10 +1476,10 @@ preset strings substitutions (\%N, \%C, \%P, \%A, \%D).
 \begin{figure}[p]
 \begin{center}
 <<plotex9, eval = TRUE, fig = TRUE, width=8.0,height=4.5>>=
-plot(Norm(), panel.first = grid(), main = "my Distribution: \%A",
-     inner = list(expression(paste(lambda, "-density of \%C(\%P)")), "CDF",
-                  "Pseudo-inverse with param's \%N"),
-     sub = "this plot was correctly generated on \%D",
+plot(Norm(), panel.first = grid(), main = "my Distribution: %A",
+     inner = list(expression(paste(lambda, "-density of %C(%P)")), "CDF",
+                  "Pseudo-inverse with param's %N"),
+     sub = "this plot was correctly generated on %D",
      cex.inner = 0.9, cex.sub = 0.8)
 @
     \caption{\label{plotexPic9}{Plot for absolutely continuous distributions 
@@ -3586,9 +3586,6 @@ Ruckdeschel P., Kohl M., Stabla T., and Camphausen F.
 %\newblock See also {http://www.uni-bayreuth.de/departments/math/org/mathe7/RUCKDESCHEL/pubs/distr.pdf}
 
 \end{thebibliography}
-<<cleanup, echo=FALSE>>=
-unloadNamespace("SweaveListingUtils")
-@
 % -------------------------------------------------------------------------------
 \end{document}
 % -------------------------------------------------------------------------------
