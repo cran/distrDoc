@@ -1,20 +1,11 @@
-# Default NAMESPACE created by R
-# Remove the previous line if you edit this file
-
-# Export all names
-exportPattern(".")
-
-# Import all packages listed as Imports or Depends
-import(
-  tools,
-  startupmsg,
-  distr,
-  distrEx,
-  distrSim,
-  distrTEst,
-  distrTeach,
-  RandVar,
-  distrMod,
-  MASS,
-  methods
-)
+import("methods")
+import("startupmsg")
+import("MASS")
+import("distr")
+import("distrEx")
+import("distrSim")
+import("RandVar")
+import("distrMod")
+import("distrTeach")
+import("distrTEst")
+import("startupmsg")
