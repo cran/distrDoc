@@ -1,6 +1,6 @@
 Package: distrDoc
-Version: 2.3.3
-Date: 2011-11-18
+Version: 2.4
+Date: 2013-02-05
 Title: Documentation for packages distr, distrEx, distrSim, distrTEst,
         distrTeach, distrMod, and distrEllipse
 Description: provides documentation in form of a common vignette to
@@ -17,10 +17,10 @@ ByteCompile: yes
 Encoding: latin1
 License: LGPL-3
 URL: http://distr.r-forge.r-project.org/
-LastChangedDate: {$LastChangedDate: 2011-11-18 12:34:59 +0100 (Fr, 18
-        Nov 2011) $}
-LastChangedRevision: {$LastChangedRevision: 750 $}
-SVNRevision: 744
-Packaged: 2012-02-21 10:07:08 UTC; ripley
+LastChangedDate: {$LastChangedDate: 2013-02-05 01:01:14 +0100 (Di, 05
+        Feb 2013) $}
+LastChangedRevision: {$LastChangedRevision: 875 $}
+SVNRevision: 834
+Packaged: 2013-02-05 18:27:26 UTC; ruckdesc
 Repository: CRAN
-Date/Publication: 2012-02-21 10:07:45
+Date/Publication: 2013-02-07 19:32:15
