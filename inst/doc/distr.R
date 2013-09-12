@@ -11,7 +11,7 @@ setToBeDefinedPkgs(pkgs = c("distr","distrEx","distrTEst","distrSim",
 
 
 ###################################################
-### code chunk number 2: distr.Rnw:223-230
+### code chunk number 2: distr.Rnw:226-233
 ###################################################
 ## preparation: set option withSweave to true
 require(distrTEst)
