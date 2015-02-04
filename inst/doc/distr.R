@@ -1,4 +1,5 @@
 ### R code from vignette source 'distr.Rnw'
+### Encoding: ISO8859-1
 
 ###################################################
 ### code chunk number 1: SweaveListingsPreparations
@@ -11,7 +12,7 @@ setToBeDefinedPkgs(pkgs = c("distr","distrEx","distrTEst","distrSim",
 
 
 ###################################################
-### code chunk number 2: distr.Rnw:226-233
+### code chunk number 2: distr.Rnw:228-235
 ###################################################
 ## preparation: set option withSweave to true
 require(distrTEst)

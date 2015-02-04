@@ -1,12 +1,14 @@
 Package: distrDoc
-Version: 2.5
-Date: 2013-09-12
-Title: Documentation for packages distr, distrEx, distrSim, distrTEst,
+Version: 2.5.1
+Date: 2015-02-04
+Title: Documentation for Packages distr, distrEx, distrSim, distrTEst,
         distrTeach, distrMod, and distrEllipse
 Description: provides documentation in form of a common vignette to packages distr, distrEx,
         distrMod, distrSim, distrTEst, distrTeach, and distrEllipse
-Author: Florian Camphausen, Matthias Kohl, Peter Ruckdeschel, Thomas Stabla
-Maintainer: Peter Ruckdeschel <Peter.Ruckdeschel@itwm.fraunhofer.de>
+Authors@R: c(person("Florian", "Camphausen", role="ctb", comment="contributed as student to the documented packages in the initial phase --2005"),
+        person("Matthias", "Kohl", role=c("aut", "cph")), 
+		person("Peter", "Ruckdeschel", role=c("cre", "cph"), email="Peter.Ruckdeschel@itwm.fraunhofer.de"), 
+		person("Thomas", "Stabla", role="ctb", comment="contributed as student to the documented packages in the initial phase --2005"))
 Depends: R(>= 2.14.0)
 Imports: distr(>= 2.2.0), distrEx(>= 2.2.0), distrSim(>= 2.2.0),
         distrTEst(>= 2.2.0), distrTeach(>= 2.2.0), RandVar(>= 0.7),
@@ -17,11 +19,18 @@ ByteCompile: yes
 Encoding: latin1
 License: LGPL-3
 URL: http://distr.r-forge.r-project.org/
-LastChangedDate: {$LastChangedDate: 2013-09-12 23:37:25 +0200 (Do, 12
-        Sep 2013) $}
-LastChangedRevision: {$LastChangedRevision: 914 $}
-SVNRevision: 913
-Packaged: 2013-09-13 15:53:03 UTC; ruckdesc
+LastChangedDate: {$LastChangedDate: 2015-02-03 14:27:42 +0100 (Di, 03
+        Feb 2015) $}
+LastChangedRevision: {$LastChangedRevision: 992 $}
+SVNRevision: 993
 NeedsCompilation: no
+Packaged: 2015-02-03 13:36:23 UTC; ruckdesc
+Author: Florian Camphausen [ctb] (contributed as student to the documented
+    packages in the initial phase --2005),
+  Matthias Kohl [aut, cph],
+  Peter Ruckdeschel [cre, cph],
+  Thomas Stabla [ctb] (contributed as student to the documented packages
+    in the initial phase --2005)
+Maintainer: Peter Ruckdeschel <Peter.Ruckdeschel@itwm.fraunhofer.de>
 Repository: CRAN
-Date/Publication: 2013-09-13 18:08:51
+Date/Publication: 2015-02-03 17:31:56

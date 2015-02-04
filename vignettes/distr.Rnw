@@ -1,6 +1,8 @@
 %\VignetteIndexEntry{distr - manual}
 %\VignetteDepends{distr}
-%\VignetteKeyword{probability distribution,simulation,estimation}
+%\VignetteKeyword{probability distribution}
+%\VignetteKeyword{simulation}
+%\VignetteKeyword{estimation}
 %\VignettePackage{distr}
 %
 \documentclass[11pt]{article}
@@ -9,10 +11,10 @@
 % Version control information:
 \svnidlong
 {$HeadURL: svn+ssh://ruckdeschel@svn.r-forge.r-project.org/svnroot/distr/pkg/distrDoc/vignettes/distr.Rnw $}
-{$LastChangedDate: 2013-09-13 17:34:59 +0200 (Fr, 13 Sep 2013) $}
-{$LastChangedRevision: 926 $}
+{$LastChangedDate: 2015-02-03 14:26:46 +0100 (Di, 03 Feb 2015) $}
+{$LastChangedRevision: 991 $}
 {$LastChangedBy: ruckdeschel $}
-%\svnid{$Id: distr.Rnw 926 2013-09-13 15:34:59Z ruckdeschel $}
+%\svnid{$Id: distr.Rnw 991 2015-02-03 13:26:46Z ruckdeschel $}
 % Don't forget to set the svn property 'svn:keywords' to
 % 'HeadURL LastChangedDate LastChangedRevision LastChangedBy' or
 % 'Id' or both depending if you use \svnidlong and/or \svnid
