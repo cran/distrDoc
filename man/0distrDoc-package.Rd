@@ -3,25 +3,27 @@
 \alias{distrDoc}
 \docType{package}
 \title{
-distrDoc -- documentation for packages distr, distrEx, distrMod, 
-distrTeach, distrSim, distrTEst
+distrDoc -- Documentation for 'distr' Family of R Packages
 }
 \description{
 \pkg{distrDoc} provides documentation in form of a common vignette to 
 packages \pkg{distr}, \pkg{distrEx}, \pkg{distrSim}, \pkg{distrTEst},
-\pkg{distrTeach}, and \pkg{distrMod}.
+\pkg{distrTeach}, \pkg{distrMod}, and \pkg{distrEllipse}.
 }
 \details{
 \tabular{ll}{
 Package: \tab distrDoc \cr
-Version: \tab 2.5 \cr
-Date: \tab 2013-09-12 \cr
-Depends: \tab R(>= 2.6.0), tools, distr(>= 2.2.0), startupmsg, distrEx(>= 2.2.0), distrSim(>= 2.2.0), distrTEst(>= 2.2.0), distrTeach(>=
-2.2.0), RandVar(>= 0.7), distrMod(>= 2.2.0), MASS, methods \cr
-LazyLoad: \tab yes \cr
+Version: \tab 2.6 \cr
+Date: \tab 2016-04-23 \cr
+Depends: \tab R(>= 2.14.0) \cr
+Imports: \tab distr(>= 2.2.0), distrEx(>= 2.2.0), distrSim(>= 2.2.0), distrTEst(>= 2.2.0),
+        distrTeach(>= 2.2.0), RandVar(>= 0.7), distrMod(>= 2.2.0), MASS, methods,
+        SweaveListingUtils, startupmsg  \cr
+Suggests: \tab Biobase \cr
+ByteCompile: \tab yes \cr
 License: \tab LGPL-3 \cr
 URL: \tab http://distr.r-forge.r-project.org/\cr
-SVNRevision: \tab 913 \cr
+SVNRevision: \tab 1097 \cr
 }}
 
 
@@ -29,12 +31,12 @@ SVNRevision: \tab 913 \cr
 The idea to split off a common vignette for a set of packages 
  in a particular documentation package is due to Seth Falcon.}
 \author{
-Peter Ruckdeschel \email{Peter.Ruckdeschel@itwm.fraunhofer.de},\cr 
+Peter Ruckdeschel \email{peter.ruckdeschel@uni-oldenburg.de},\cr 
 Thomas Stabla \email{statho3@web.de},\cr 
 Florian Camphausen \email{fcampi@gmx.de},\cr
 Matthias Kohl \email{Matthias.Kohl@stamats.de}\cr
 
-\emph{Maintainer:} Peter Ruckdeschel \email{Peter.Ruckdeschel@itwm.fraunhofer.de}
+\emph{Maintainer:} Peter Ruckdeschel \email{peter.ruckdeschel@uni-oldenburg.de}
 }
 
 \seealso{see mails "[Rd] package vignettes, suggests and R CMD check"
