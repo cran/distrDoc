@@ -1,4 +1,4 @@
-citHeader("To cite package distr in publications use:")
+citHeader("To cite package distrDoc (and other packages of the distr family of packages) in publications use:")
 
 citEntry(entry="Article",
          title = "S4 Classes for Distributions",
@@ -14,8 +14,8 @@ citEntry(entry="Article",
          number       = 2,
          pages        = "2--6",
          month        = "May",
-         url = "http://CRAN.R-project.org/doc/Rnews/Rnews_2006-2.pdf",
-         pdf          = "http://CRAN.R-project.org/doc/Rnews/Rnews_2006-2.pdf",
+         url = "https://CRAN.R-project.org/doc/Rnews/Rnews_2006-2.pdf",
+         pdf          = "https://CRAN.R-project.org/doc/Rnews/Rnews_2006-2.pdf",
 textVersion = paste("Ruckdeschel, P., Kohl, M., Stabla, T., & Camphausen, F. (2006)",
                     "S4 Classes for Distributions"))
 
