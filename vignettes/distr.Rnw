@@ -12,10 +12,10 @@
 % Version control information:
 \svnidlong
 {$HeadURL: svn+ssh://ruckdeschel@svn.r-forge.r-project.org/svnroot/distr/pkg/distrDoc/vignettes/distr.Rnw $}
-{$LastChangedDate: 2019-03-01 17:00:34 +0100 (Fr, 01 Mrz 2019) $}
-{$LastChangedRevision: 1298 $}
+{$LastChangedDate: 2022-11-12 14:51:25 +0100 (Sa, 12. Nov 2022) $}
+{$LastChangedRevision: 1375 $}
 {$LastChangedBy: ruckdeschel $}
-%\svnid{$Id: distr.Rnw 1298 2019-03-01 16:00:34Z ruckdeschel $}
+%\svnid{$Id: distr.Rnw 1375 2022-11-12 13:51:25Z ruckdeschel $}
 % Don't forget to set the svn property 'svn:keywords' to
 % 'HeadURL LastChangedDate LastChangedRevision LastChangedBy' or
 % 'Id' or both depending if you use \svnidlong and/or \svnid
@@ -293,7 +293,7 @@ Zs
 @
 \par
 \begin{small}
-In the environments of \texttt{RStudio}, see \url{https://www.rstudio.com/} and
+In the environments of \texttt{RStudio}, see \url{https://posit.co} and
 \texttt{Jupyter IRKernel}, see \url{https://github.com/IRkernel/IRkernel},
 calls to \code{q} are caught away from standard {\sf R} evaluation and are treated
 in a non-standard way. This non-standard evaluation in particular throws

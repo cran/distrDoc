@@ -1,8 +1,8 @@
-## ----knitRPreparations,include=FALSE-------------------------------------
+## ----knitRPreparations,include=FALSE------------------------------------------
 library(knitr)
 opts_chunk$set(tidy=FALSE)
 
-## ----echo = FALSE, results = "hide"--------------------------------------
+## ----echo = FALSE, results = "hide"-------------------------------------------
 ## preparation: set option withSweave to TRUE
 require(distrTEst)
 require(distrEx)
@@ -11,7 +11,7 @@ require(distrMod)
 distroptions(withSweave = TRUE)
 options("newDevice" = TRUE)
 
-## ----exam1, eval = TRUE, fig.width=8.0, fig.height=4.5-------------------
+## ----exam1, eval = TRUE, fig.width=8.0, fig.height=4.5------------------------
 require(distr)
 N <- Norm(mean = 2, sd = 1.3)
 P <- Pois(lambda = 1.2)
@@ -24,34 +24,34 @@ q(Z)(0.3)
 Zs <- r(Z)(50)
 Zs
 
-## ----DiscrDist, eval = TRUE----------------------------------------------
+## ----DiscrDist, eval = TRUE---------------------------------------------------
 D <- DiscreteDistribution(supp = c(1,5,7,21), prob = c(0.1,0.1,0.6,0.2))
 D
 plot(D)
 
-## ----AbscDist, eval = TRUE-----------------------------------------------
+## ----AbscDist, eval = TRUE----------------------------------------------------
 AC <- AbscontDistribution(d = function(x) exp(-abs(x)^3), withStand = TRUE)
 AC
 plot(AC)
 
-## ----examLis, eval = TRUE------------------------------------------------
+## ----examLis, eval = TRUE-----------------------------------------------------
 library(distr)
 M1 <- UnivarMixingDistribution(Norm(), Pois(lambda=1), Norm(), 
       withSimplify = FALSE)
 M2 <- UnivarMixingDistribution(M1, Norm(), M1, Norm(), withSimplify = FALSE)
 M2
 
-## ----warningArith, eval = TRUE-------------------------------------------
+## ----warningArith, eval = TRUE------------------------------------------------
   A1 <- Norm(); A2 <- Unif()
   A1 + A2
 
-## ----examdcP, eval = TRUE------------------------------------------------
+## ----examdcP, eval = TRUE-----------------------------------------------------
 decomposePM(Norm())
      decomposePM(Binom(2,0.3)-Binom(5,.4))
      decomposePM(UnivarLebDecDistribution(Norm(),Binom(2,0.3)-Binom(5,.4), 
                  acWeight = 0.3))
 
-## ----examflat, eval = TRUE-----------------------------------------------
+## ----examflat, eval = TRUE----------------------------------------------------
 D1 <- Norm()
 D2 <- Pois(1)
 D3 <- Binom(1,.4)
@@ -63,66 +63,66 @@ D
 D0<-flat.mix(D)
 D0
 
-## ----arithmetic, eval = TRUE---------------------------------------------
+## ----arithmetic, eval = TRUE--------------------------------------------------
   A1 <- Norm(); A2 <- Unif()
   d(sin(A1 + A2))(0.1)
   d(sin(A1 + A2))(0.1)
   sin(A1 + A2)
 
-## ----arith2v1, eval = TRUE-----------------------------------------------
+## ----arith2v1, eval = TRUE----------------------------------------------------
   A1 <- Norm(); A2 <- Unif()
   A1A2 <- A1*A2
   plot(A1A2)
 
-## ----arith2v2, eval = TRUE-----------------------------------------------
+## ----arith2v2, eval = TRUE----------------------------------------------------
   A12 <- 1/(A2 + .3)
   plot(A12) 
 
-## ----arith2v3, eval = TRUE-----------------------------------------------
+## ----arith2v3, eval = TRUE----------------------------------------------------
   B <- Binom(5,.2)+1
   A1B <- A1^B
   plot(A1B, xlim=c(-3,3))
 
-## ----arith2v4------------------------------------------------------------
+## ----arith2v4-----------------------------------------------------------------
   plot(1.2^A1)
 
-## ----arith2v5------------------------------------------------------------
+## ----arith2v5-----------------------------------------------------------------
   plot(B^A1)
 
-## ----Hub, eval = TRUE----------------------------------------------------
+## ----Hub, eval = TRUE---------------------------------------------------------
 H <- Huberize(Norm(),lower=-1,upper=2)
 plot(H)
 
-## ----Trun, eval = TRUE---------------------------------------------------
+## ----Trun, eval = TRUE--------------------------------------------------------
 T <- Truncate(Norm(),lower=-1,upper=2)
 plot(T)
 
-## ----Min1, eval = TRUE---------------------------------------------------
+## ----Min1, eval = TRUE--------------------------------------------------------
 M1 <- Maximum(Unif(0,1), Minimum(Unif(0,1), Unif(0,1)))
 plot(M1)
 
-## ----Min2, eval = TRUE---------------------------------------------------
+## ----Min2, eval = TRUE--------------------------------------------------------
 M2 <- Minimum(Exp(4),4)
 plot(M2)
 
-## ----Min3, eval = TRUE---------------------------------------------------
+## ----Min3, eval = TRUE--------------------------------------------------------
 M3 <- Minimum(Norm(2,2), Pois(3))
 plot(M3)
 
-## ----TruncExtr, eval = TRUE----------------------------------------------
+## ----TruncExtr, eval = TRUE---------------------------------------------------
 N <- Norm()
 TN <- Truncate(N, 20,22)
 r(TN)(20)  ## simulation accurate although :
 p(N)(20, lower.tail = FALSE) ## prob that N>=20 
 
-## ----qrex, eval = TRUE---------------------------------------------------
+## ----qrex, eval = TRUE--------------------------------------------------------
 B <- Binom(5,0.5)
 p(B)(3)
 p.l(B)(3)
 q(B)(.5)
 q.r(B)(0.5)
 
-## ----probHN, eval = TRUE-------------------------------------------------
+## ----probHN, eval = TRUE------------------------------------------------------
 B0 <- as(Binom(5,0.5),"DiscreteDistribution")
    ## coercion necessary:
    ## otherwise slot "prob" of B0 will be returned
@@ -130,80 +130,80 @@ prob(B0)
 HN <- Huberize(N, -2,1)
 prob(HN)
 
-## ----makeAC, eval = TRUE-------------------------------------------------
+## ----makeAC, eval = TRUE------------------------------------------------------
 par(mfrow=c(2,3))
 plot(makeAbscontDistribution(Nbinom(5,.5)),mfColRow=FALSE)
 plot(makeAbscontDistribution(HN),mfColRow=FALSE)
 par(mfrow=c(1,1))
 
-## ----getLowUp, eval = TRUE-----------------------------------------------
+## ----getLowUp, eval = TRUE----------------------------------------------------
 getLow(Nbinom(5,0.5))
 getUp(Nbinom(5,0.5))
 getLow(Norm(5,0.5))
 getUp(Norm(5,0.5))
 
-## ----cauchy1, eval = TRUE------------------------------------------------
+## ----cauchy1, eval = TRUE-----------------------------------------------------
   plot(Cauchy())
 
-## ----cauchy2, eval = TRUE------------------------------------------------
+## ----cauchy2, eval = TRUE-----------------------------------------------------
   plot(Cauchy(),xlim=c(-4,4))
 
-## ----plotex1, eval = TRUE, fig.width=8.0, fig.height=4.5-----------------
+## ----plotex1, eval = TRUE, fig.width=8.0, fig.height=4.5----------------------
 plot(Binom(size = 4, prob = 0.3))
 
-## ----plotex2, eval = TRUE, fig.width=8.0, fig.height=4.5-----------------
+## ----plotex2, eval = TRUE, fig.width=8.0, fig.height=4.5----------------------
 plot(Binom(size = 4, prob = 0.3), do.points = FALSE, verticals = FALSE)
 
-## ----plotex3, eval = TRUE, fig.width=8.0, fig.height=4.5-----------------
+## ----plotex3, eval = TRUE, fig.width=8.0, fig.height=4.5----------------------
 plot(Binom(size = 4, prob = 0.3), main = TRUE, inner = FALSE, cex.main = 1.6,
      tmar = 6)
 
-## ----plotex4, eval = TRUE, fig.width=8.0, fig.height=4.5-----------------
+## ----plotex4, eval = TRUE, fig.width=8.0, fig.height=4.5----------------------
 plot(Binom(size = 4, prob = 0.3), cex.points = 1.2, pch = 20, lwd = 2)
 
-## ----plotex5, eval = TRUE, fig.width=8.0, fig.height=4.5-----------------
+## ----plotex5, eval = TRUE, fig.width=8.0, fig.height=4.5----------------------
 B <- Binom(size = 4, prob = 0.3)
 plot(B, col="red", col.points = "green", main = TRUE, col.main="blue",
      col.sub = "orange", sub = TRUE, cex.sub = 0.6, col.inner = "brown")
 
-## ----plotex6, eval = TRUE, fig.width=8.0, fig.height=4.5-----------------
+## ----plotex6, eval = TRUE, fig.width=8.0, fig.height=4.5----------------------
 plot(Nbinom(size = 4,prob = 0.3), cex.points = 1.2, pch.u = 20, pch.a = 10)
 
-## ----plotex7, eval = TRUE, fig.width=8.0, fig.height=4.5-----------------
+## ----plotex7, eval = TRUE, fig.width=8.0, fig.height=4.5----------------------
 plot(Chisq(), log = "xy", ngrid = 100)
 
-## ----plotex8, eval = TRUE, fig.width=8.0, fig.height=4.5-----------------
+## ----plotex8, eval = TRUE, fig.width=8.0, fig.height=4.5----------------------
 plot(Norm(), lwd=3, col = "red", ngrid = 200, lty = 3, las = 2)
 
-## ----plotex9, eval = TRUE, fig.width=8.0, fig.height=4.5-----------------
+## ----plotex9, eval = TRUE, fig.width=8.0, fig.height=4.5----------------------
 plot(Norm(), panel.first = grid(), main = "my Distribution: %A",
      inner = list(expression(paste(lambda, "-density of %C(%P)")), "CDF",
                   "Pseudo-inverse with param's %N"),
      sub = "this plot was correctly generated on %D",
      cex.inner = 0.9, cex.sub = 0.8)
 
-## ----plotex10, eval = TRUE, fig.width=8.0, fig.height=4.5----------------
+## ----plotex10, eval = TRUE, fig.width=8.0, fig.height=4.5---------------------
 Ch <- Chisq(); setgaps(Ch, exactq = 3)
 plot(Ch, cex = 1.2, pch.u = 20, pch.a = 10, col.points = "green", 
      col.vert = "red")
 
-## ----plotex11, eval = TRUE, fig.width=8.0, fig.height=8.0----------------
+## ----plotex11, eval = TRUE, fig.width=8.0, fig.height=8.0---------------------
 layout(matrix(c(1,3,2,3), nrow=2))
 plot(N, mfColRow = FALSE)
 
-## ----plotex12, eval = TRUE, fig.width=8.0, fig.height=8.0----------------
+## ----plotex12, eval = TRUE, fig.width=8.0, fig.height=8.0---------------------
 layout(matrix(c(rep(1,6),2,2,3,3,4,4,5,5,5,6,6,6), 
                    nrow=3, byrow=TRUE))
 plot(HN, mfColRow = FALSE,
         to.draw.arg=c("p","d.c","p.c","q.c", "p.d","q.d"))
 
-## ----simulate, eval = TRUE-----------------------------------------------
+## ----simulate, eval = TRUE----------------------------------------------------
 X <- Simulation()
 seed(X) <- setRNG()
 simulate(X)
 Data(X)[1:10]
 
-## ----expectation, eval = TRUE--------------------------------------------
+## ----expectation, eval = TRUE-------------------------------------------------
 D4 <- LMCondDistribution(theta = 1)
 D4  # corresponds to Norm(cond, 1)
 N <- Norm(mean = 2)
@@ -227,17 +227,17 @@ Y <- 5 * Binom(4, .25) - 3
 Y
 E(Y)  
 
-## ----expectationlow, eval = TRUE-----------------------------------------
+## ----expectationlow, eval = TRUE----------------------------------------------
 E(Cauchy(), low=3, upp=5)
 var(Cauchy(), low=3, upp=5)
 
-## ----expectation2, eval = TRUE-------------------------------------------
+## ----expectation2, eval = TRUE------------------------------------------------
 E(N, function(x)x^2) 
 E(N, function(x)x^2,  lowerTruncQuantile = 1e-5)
 var(Cauchy(), low =3, upperTruncQuantile = 1e-5,  IQR.fac = 10)
 var(Cauchy(), low =3, upperTruncQuantile = 1e-10, IQR.fac = 20)
 
-## ----var, eval = FALSE---------------------------------------------------
+## ----var, eval = FALSE--------------------------------------------------------
 #    var <- function(x , ...)
 #         {dots <- list(...)
 #          if(hasArg(y)) y <- dots$"y"
@@ -251,7 +251,7 @@ var(Cauchy(), low =3, upperTruncQuantile = 1e-10, IQR.fac = 20)
 #             stats::var(x = x, y = NULL, na.rm = na.rm, use)
 #          }
 
-## ----MCEstimator, eval = TRUE--------------------------------------------
+## ----MCEstimator, eval = TRUE-------------------------------------------------
     library(distrMod)
     x <- rgamma(50, scale = 0.5, shape = 3)
     G <- GammaFamily(scale = 1, shape = 2)
@@ -262,7 +262,7 @@ var(Cauchy(), low =3, upperTruncQuantile = 1e-10, IQR.fac = 20)
     }
     MCEstimator(x = x, ParamFamily = G, criterion = negLoglikelihood)
 
-## ----censPoisFamilyDef, eval = FALSE-------------------------------------
+## ----censPoisFamilyDef, eval = FALSE------------------------------------------
 #      ## search interval for reasonable parameters
 #      startPar <- function(x,...) c(.Machine$double.eps,max(x))
 #  
@@ -270,13 +270,13 @@ var(Cauchy(), low =3, upperTruncQuantile = 1e-10, IQR.fac = 20)
 #      makeOKPar <- function(param) {if(param<=0) return(.Machine$double.eps)
 #                                    return(param)}
 
-## ----PoisFamilyDef, eval = FALSE-----------------------------------------
+## ----PoisFamilyDef, eval = FALSE----------------------------------------------
 #  setClass("PoisFamily", contains = "L2ParamFamily")
 
-## ----NormLocationFamily, eval = FALSE------------------------------------
+## ----NormLocationFamily, eval = FALSE-----------------------------------------
 #  setClass("NormLocationFamily", contains = "L2LocationFamily")
 
-## ----L2ScaleFamily, eval = FALSE-----------------------------------------
+## ----L2ScaleFamily, eval = FALSE----------------------------------------------
 #   setMethod("validParameter", signature(object = "L2ScaleFamily"),
 #            function(object, param, tol=.Machine$double.eps){
 #               if(is(param,"ParamFamParameter"))
@@ -285,7 +285,7 @@ var(Cauchy(), low =3, upperTruncQuantile = 1e-10, IQR.fac = 20)
 #               if(length(param)!=1) return(FALSE)
 #               return(param > tol)})
 
-## ----GammaFamilyModify, eval = FALSE-------------------------------------
+## ----GammaFamilyModify, eval = FALSE------------------------------------------
 #  setMethod("modifyModel", signature(model = "GammaFamily",
 #             param = "ParamFamParameter"),
 #            function(model, param, ...){
@@ -298,11 +298,11 @@ var(Cauchy(), low =3, upperTruncQuantile = 1e-10, IQR.fac = 20)
 #               return(M)
 #            })
 
-## ----MLEstimator, eval = TRUE--------------------------------------------
+## ----MLEstimator, eval = TRUE-------------------------------------------------
     MLEstimator(x = x, ParamFamily = G)
     MDEstimator(x = x, ParamFamily = G, distance = KolmogorovDist)
 
-## ----NormScaleFam, eval = FALSE------------------------------------------
+## ----NormScaleFam, eval = FALSE-----------------------------------------------
 #  setMethod("mleCalc", signature(x = "numeric", PFam = "NormScaleFamily"),
 #             function(x, PFam, ...){
 #             n <- length(x)
@@ -317,7 +317,7 @@ var(Cauchy(), low =3, upperTruncQuantile = 1e-10, IQR.fac = 20)
 #             return(meRes(x, theta, ll, param, crit.fct, Infos = Infos))
 #  })
 
-## ----CIex, eval = TRUE---------------------------------------------------
+## ----CIex, eval = TRUE--------------------------------------------------------
 require(distrMod)
 ## some transformation
 mtrafo <- function(x){
@@ -348,7 +348,7 @@ print(ci, digits = 4, show.details="minimal")
 par(mfrow=c(2,1))
 plot(profile(res))
 
-## ----NormApprox, eval = TRUE---------------------------------------------
+## ----NormApprox, eval = TRUE--------------------------------------------------
 require(distr)
 
 N <- Norm(0,1)
@@ -385,7 +385,7 @@ lines(c(-4,4), c(0,0))
 
 par(opar)
 
-## ----ConvolutionNormalDistr, eval = TRUE---------------------------------
+## ----ConvolutionNormalDistr, eval = TRUE--------------------------------------
 require(distr)
 
 ## initialize two normal distributions
@@ -472,7 +472,7 @@ cat("Kolmogorov distance of cdfs:\t", dk, "\n")
 distroptions("TruncQuantile" = oldeps)
 
 
-## ----ComparisonFFTandRtoDPQ.R, eval = TRUE-------------------------------
+## ----ComparisonFFTandRtoDPQ.R, eval = TRUE------------------------------------
 require(distr)
 
 ################################
@@ -537,7 +537,7 @@ legend("topleft",
        legend = c("Exact", "RtoDQP-Approximation"),
        fill = c("black", "red"))
 
-## ----StationaryRegressorDistr, eval = TRUE-------------------------------
+## ----StationaryRegressorDistr, eval = TRUE------------------------------------
 require(distr)
 
 ## Approximation of the stationary regressor 
@@ -641,7 +641,7 @@ cat("Kolmogorov distance of cdfs:\t", dk, "\n")
 distroptions("TruncQuantile" = oldeps)
 
 
-## ----destructive, eval = TRUE--------------------------------------------
+## ----destructive, eval = TRUE-------------------------------------------------
 ##########################################################
 ## Demo: Instructive destructive example
 ##########################################################
@@ -658,7 +658,7 @@ B <- Binom()
 N@d <- B@d
 plot(N, lwd = 3) 
 
-## ----SimulateandEstimate, eval = TRUE, fig.width=8.8, fig.height=3.8-----
+## ----SimulateandEstimate, eval = TRUE, fig.width=8.8, fig.height=3.8----------
 require(distrTEst)
     ### also loads distrSim
 sim <- new("Simulation",
@@ -684,7 +684,7 @@ sim
 summary(contsim)
 plot(contsim)
 
-## ----elist, eval = TRUE--------------------------------------------------
+## ----elist, eval = TRUE-------------------------------------------------------
 require(distrTEst)
 psim <- function(theta,y,m0){
   mean(pmin(pmax(-m0, y - theta), m0))
@@ -716,13 +716,13 @@ elist
 summary(elist)
 plot(elist, cex = 0.7, las = 2)
 
-## ----mest, eval = TRUE---------------------------------------------------
+## ----mest, eval = TRUE--------------------------------------------------------
 result.cont.mest
 
-## ----elist.summary, eval = TRUE------------------------------------------
+## ----elist.summary, eval = TRUE-----------------------------------------------
 summary(elist)
 
-## ----Expectation, eval = TRUE--------------------------------------------
+## ----Expectation, eval = TRUE-------------------------------------------------
 require("distrEx")
 # Example
 id <- function(x) x
@@ -738,7 +738,7 @@ N <- Norm(1, 1)
 E(N, id)
 E(N, sq) - E(N, id)^2
 
-## ----nFoldConvolution, eval = TRUE---------------------------------------
+## ----nFoldConvolution, eval = TRUE--------------------------------------------
 ##########################################################
 ## Demo: n-fold convolution of absolutely continuous 
 ##       probability distributions
