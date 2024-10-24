@@ -1,6 +1,6 @@
 Package: distrDoc
-Version: 2.8.2
-Date: 2024-02-01
+Version: 2.8.4
+Date: 2024-10-22
 Title: Documentation for 'distr' Family of R Packages
 Description: Provides documentation in form of a common vignette to packages 'distr',
             'distrEx', 'distrMod', 'distrSim', 'distrTEst', 'distrTeach', and 'distrEllipse'.
@@ -19,12 +19,12 @@ VignetteBuilder: knitr
 ByteCompile: yes
 License: LGPL-3
 URL: http://distr.r-forge.r-project.org/
-LastChangedDate: {$LastChangedDate: 2024-01-31 17:12:45 +0100 (Mi, 31
-        Jan 2024) $}
-LastChangedRevision: {$LastChangedRevision: 1432 $}
-VCS/SVNRevision: 1435
+LastChangedDate: {$LastChangedDate: 2024-10-22 22:59:37 +0200 (Di, 22
+        Okt 2024) $}
+LastChangedRevision: {$LastChangedRevision: 1477 $}
+VCS/SVNRevision: 1476
 NeedsCompilation: no
-Packaged: 2024-02-01 12:08:01 UTC; ruckdesc
+Packaged: 2024-10-23 19:00:10 UTC; ruckdesc
 Author: Florian Camphausen [ctb] (contributed as student to the documented
     packages in the initial phase --2005),
   Matthias Kohl [aut, cph],
@@ -33,4 +33,4 @@ Author: Florian Camphausen [ctb] (contributed as student to the documented
     in the initial phase --2005)
 Maintainer: Peter Ruckdeschel <peter.ruckdeschel@uni-oldenburg.de>
 Repository: CRAN
-Date/Publication: 2024-02-01 15:00:02 UTC
+Date/Publication: 2024-10-24 10:30:37 UTC
