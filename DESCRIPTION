@@ -1,6 +1,6 @@
 Package: distrDoc
-Version: 2.8.4
-Date: 2024-10-22
+Version: 2.8.5
+Date: 2025-01-11
 Title: Documentation for 'distr' Family of R Packages
 Description: Provides documentation in form of a common vignette to packages 'distr',
             'distrEx', 'distrMod', 'distrSim', 'distrTEst', 'distrTeach', and 'distrEllipse'.
@@ -13,18 +13,18 @@ Authors@R: c(person("Florian", "Camphausen", role="ctb", comment="contributed as
 Depends: R(>= 3.4)
 Imports: distr(>= 2.2.0), distrEx(>= 2.2.0), distrSim(>= 2.2.0),
         distrTEst(>= 2.2.0), distrTeach(>= 2.2.0), RandVar(>= 0.7),
-        distrMod(>= 2.2.0), MASS, methods, startupmsg
+        distrMod(>= 2.2.0), MASS, methods, startupmsg(>= 1.0.0)
 Suggests: Biobase, knitr
 VignetteBuilder: knitr
 ByteCompile: yes
 License: LGPL-3
 URL: http://distr.r-forge.r-project.org/
-LastChangedDate: {$LastChangedDate: 2024-10-22 22:59:37 +0200 (Di, 22
-        Okt 2024) $}
-LastChangedRevision: {$LastChangedRevision: 1477 $}
-VCS/SVNRevision: 1476
+LastChangedDate: {$LastChangedDate: 2025-01-12 00:02:37 +0100 (So, 12
+        Jan 2025) $}
+LastChangedRevision: {$LastChangedRevision: 1500 $}
+VCS/SVNRevision: 1499
 NeedsCompilation: no
-Packaged: 2024-10-23 19:00:10 UTC; ruckdesc
+Packaged: 2025-01-12 01:19:52 UTC; ruckdesc
 Author: Florian Camphausen [ctb] (contributed as student to the documented
     packages in the initial phase --2005),
   Matthias Kohl [aut, cph],
@@ -33,4 +33,4 @@ Author: Florian Camphausen [ctb] (contributed as student to the documented
     in the initial phase --2005)
 Maintainer: Peter Ruckdeschel <peter.ruckdeschel@uni-oldenburg.de>
 Repository: CRAN
-Date/Publication: 2024-10-24 10:30:37 UTC
+Date/Publication: 2025-01-14 14:00:01 UTC
